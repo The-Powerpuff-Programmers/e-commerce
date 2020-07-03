@@ -24,12 +24,7 @@ export class UserCheckoutForm extends React.Component {
 
   render() {
     if (this.props.cart.isComplete) {
-      return (
-        <h3>
-          Thank you! Your order has been submitted and your walls will be
-          decorated extraordinarily, momentarily...
-        </h3>
-      )
+      return <h3>Thank you! Your order has been submitted</h3>
     }
     return (
       <div id="checkout">
@@ -58,15 +53,9 @@ export class UserCheckoutForm extends React.Component {
           />
           <br />
           <br />
-          <button type="submit">Order that Oeuvre</button>
+          <button type="submit">Place your Order</button>
         </form>
         <br />
-        <sup>
-          <i>
-            *An "oeuvre" is the very fancy French word for a piece of art. Just
-            some light pretention to go with your new possession(s)!
-          </i>
-        </sup>
       </div>
     )
   }

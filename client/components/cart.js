@@ -24,9 +24,9 @@ export class Cart extends React.Component {
     return (
       <div id="cart">
         {this.props.userCart.isComplete ? (
-          <h2>🖼 Purchased Posters 🖼</h2>
+          <h2>Purchased Posters</h2>
         ) : (
-          <h2>🖼 Prospective Posters for Purchase 🖼</h2>
+          <h2>Your Cart</h2>
         )}
         {userCartProducts.map(product => (
           <div key={product.id}>
@@ -75,9 +75,7 @@ export class Cart extends React.Component {
             {this.props.userCart.totalQty}
           </h3>
         ) : (
-          <h3>
-            Your cart is empty! Pick out some posters before peacin', please 🙏
-          </h3>
+          <h3>Your cart is empty!</h3>
         )}
 
         <hr />

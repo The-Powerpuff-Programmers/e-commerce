@@ -14,12 +14,6 @@ export const UserHome = props => {
       {isAdmin ? (
         <div>
           <h3>Welcome, {email}! </h3>
-          <h4>
-            <em>
-              Thank you for helping to make this site as beautiful as one of our
-              many *mock* masterpieces!
-            </em>
-          </h4>
           <Link to="/admin/products">Edit Products</Link>
           <br />
           <br />
@@ -28,14 +22,8 @@ export const UserHome = props => {
       ) : (
         <div>
           <h3>Welcome back, {email}!</h3>
-          <h4>
-            <i>
-              May your shopping experience be as fine as the art in our
-              inventory . . .
-            </i>
-          </h4>
           <hr />
-          <h3 className="siteHeader">🖼 Previously Procured Pieces 🖼</h3>
+          <h3 className="siteHeader">Past Purchases</h3>
           <br />
           {orders.map(order => (
             <div key={order.id}>

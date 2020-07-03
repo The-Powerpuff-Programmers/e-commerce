@@ -43,11 +43,16 @@ router.post('/logout', (req, res) => {
 
 //changed from boilermaker a bit
 router.get('/me', async (req, res) => {
-  const user = await User.findByPk(req.user.id, {
-    include: [{model: Order}]
-  })
-  console.log(req.user)
-  res.json(user)
+  try {
+    const user = await User.findByPk(req.user.id, {
+      include: [{model: Order}]
+    })
+    console.log('~~YO~', req.user)
+    res.json(user)
+  } catch (error) {
+    console.log('~~YO~', req.user)
+    console.error(error)
+  }
 })
 
 router.use('/google', require('./google'))
