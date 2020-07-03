@@ -10,55 +10,53 @@ const DELETE_ITEM = 'DELETE_ITEM'
 const CHECKOUT = 'CHECKOUT'
 
 //ACTION TYPES
-const getCurrentOrder = cart => ({
+const getCurrentOrder = (cart) => ({
   type: GET_CURRENT_ORDER,
-  cart
+  cart,
 })
-const decreaseQty = cart => ({
+const decreaseQty = (cart) => ({
   type: DECREASE_QTY,
-  cart
+  cart,
 })
 
-const increaseQty = cart => ({
+const increaseQty = (cart) => ({
   type: INCREASE_QTY,
-  cart
+  cart,
 })
-const deleteItem = cart => ({
+const deleteItem = (cart) => ({
   type: DELETE_ITEM,
-  cart
+  cart,
 })
-const checkout = cart => ({
+const checkout = (cart) => ({
   type: CHECKOUT,
-  cart
+  cart,
 })
 
 //INITIAL STATE
 
 const initialState = {
-  cart: {}
+  cart: {},
 }
 
 //THUNKS
 
-export const fetchCurrentOrder = () => async dispatch => {
+export const fetchCurrentOrder = () => async (dispatch) => {
   try {
     const {data} = await axios.get(`/api/cart`)
     dispatch(getCurrentOrder(data))
-    console.log('>>>>>>>data:', data)
   } catch (err) {
     console.error(err)
   }
 }
-export const increaseQuant = product => async dispatch => {
+export const increaseQuant = (product) => async (dispatch) => {
   try {
     const {data} = await axios.put(`/api/cart/${product.item.id}`)
     dispatch(increaseQty(data))
-    console.log('>>>>>>>data: ', data)
   } catch (err) {
     console.error(err)
   }
 }
-export const decreaseQuant = product => async dispatch => {
+export const decreaseQuant = (product) => async (dispatch) => {
   try {
     const {data} = await axios.put(`/api/cart/${product.item.id}/decrement`)
     dispatch(decreaseQty(data))
@@ -66,7 +64,7 @@ export const decreaseQuant = product => async dispatch => {
     console.error(err)
   }
 }
-export const deleteProd = product => async dispatch => {
+export const deleteProd = (product) => async (dispatch) => {
   try {
     const {data} = await axios.delete(`/api/cart/${product.item.id}`)
     dispatch(deleteItem(data))
@@ -74,7 +72,7 @@ export const deleteProd = product => async dispatch => {
     console.error(err)
   }
 }
-export const checkoutCart = shippingInfo => async dispatch => {
+export const checkoutCart = (shippingInfo) => async (dispatch) => {
   try {
     const {data} = await axios.put(`/api/checkout`, shippingInfo)
     dispatch(checkout(data))
@@ -88,7 +86,6 @@ export const checkoutCart = shippingInfo => async dispatch => {
 export default function cartReducer(state = initialState, action) {
   switch (action.type) {
     case GET_CURRENT_ORDER:
-      console.log(state)
       return {...state, cart: action.cart}
 
     case INCREASE_QTY:
@@ -100,7 +97,6 @@ export default function cartReducer(state = initialState, action) {
     case DELETE_ITEM:
       return {...state, cart: action.cart}
     case CHECKOUT:
-      console.log(state)
       return {...state, cart: action.cart}
     default:
       return state

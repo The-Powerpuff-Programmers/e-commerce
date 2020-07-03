@@ -4,7 +4,7 @@ import {
   fetchCurrentOrder,
   increaseQuant,
   decreaseQuant,
-  deleteProd
+  deleteProd,
 } from '../store/guestCart'
 import GuestCheckoutForm from './guest-checkout'
 
@@ -20,7 +20,6 @@ export class GuestCart extends React.Component {
 
   render() {
     const guestCartItems = this.props.guestCart.items || {}
-    console.log(`guest cart total: `, this.props.guestCart.totalPrice)
     return (
       <div id="cart">
         {this.props.guestCart.isComplete ? (
@@ -28,7 +27,7 @@ export class GuestCart extends React.Component {
         ) : (
           <h2>Your Cart</h2>
         )}
-        {Object.values(guestCartItems).map(product => (
+        {Object.values(guestCartItems).map((product) => (
           <div key={product.item.id}>
             <img
               src={product.item.imageUrl}
@@ -88,14 +87,14 @@ export class GuestCart extends React.Component {
 }
 
 //Insert name and address form for checkout
-const mapState = state => {
+const mapState = (state) => {
   return {guestCart: state.guestCart.cart}
 }
 
-const mapDispatch = dispatch => ({
+const mapDispatch = (dispatch) => ({
   fetchCurrentOrder: () => dispatch(fetchCurrentOrder()),
-  increaseQuant: product => dispatch(increaseQuant(product)),
-  decreaseQuant: product => dispatch(decreaseQuant(product)),
-  deleteProd: productId => dispatch(deleteProd(productId))
+  increaseQuant: (product) => dispatch(increaseQuant(product)),
+  decreaseQuant: (product) => dispatch(decreaseQuant(product)),
+  deleteProd: (productId) => dispatch(deleteProd(productId)),
 })
 export default connect(mapState, mapDispatch)(GuestCart)

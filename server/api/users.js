@@ -10,13 +10,10 @@ router.get('/:userId/cart', async (req, res, next) => {
       where: {userId: userId, isComplete: false},
       include: [
         {
-          model: Product
-        }
-      ]
+          model: Product,
+        },
+      ],
     })
-    console.log('/userId/cart --- CALLED!')
-    console.log('this cart was created:', created) // remember to remove!!
-    console.log(req.session.passport.user) //remember to remove!!
     res.json(userCart)
   } catch (err) {
     next(err)
@@ -69,7 +66,7 @@ router.get('/', async (req, res, next) => {
   try {
     const users = await User.findAll({
       // explicitly select only the id and email fields - even though users' passwords are encrypted, it won't help if we just send everything to anyone who asks!
-      attributes: ['id', 'email']
+      attributes: ['id', 'email'],
       //For code review: do we want to exclude passwords to admins too if we're planning on protecting this route?
     })
     if (req.user && req.user.isAdmin) {
@@ -88,9 +85,9 @@ router.get('/:userId', async (req, res, next) => {
     const user = await User.findByPk(req.params.userId, {
       include: [
         {
-          model: Order
-        }
-      ]
+          model: Order,
+        },
+      ],
     })
 
     if (

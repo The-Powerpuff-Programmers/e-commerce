@@ -9,7 +9,7 @@ export class EditProductForm extends Component {
       title: '',
       artist: '',
       price: 0,
-      imageUrl: ''
+      imageUrl: '',
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -17,7 +17,7 @@ export class EditProductForm extends Component {
 
   handleChange(event) {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     })
   }
 
@@ -27,15 +27,14 @@ export class EditProductForm extends Component {
       title: this.state.title,
       artist: this.state.artist,
       price: this.state.price,
-      imageUrl: this.state.imageUrl
+      imageUrl: this.state.imageUrl,
     }
     this.props.editProduct(this.props.id, formData)
-    console.log('edit product form props are: ', this.props)
     this.setState({
       title: '',
       artist: '',
       price: 0,
-      imageUrl: ''
+      imageUrl: '',
     })
   }
 
@@ -85,11 +84,11 @@ export class EditProductForm extends Component {
   }
 }
 
-const mapState = state => {
+const mapState = (state) => {
   return {product: state.product}
 }
-const mapDispatch = dispatch => ({
-  editProduct: (id, formData) => dispatch(editProduct(id, formData))
+const mapDispatch = (dispatch) => ({
+  editProduct: (id, formData) => dispatch(editProduct(id, formData)),
 })
 
 export default connect(mapState, mapDispatch)(EditProductForm)
