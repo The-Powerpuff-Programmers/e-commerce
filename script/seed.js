@@ -13,7 +13,7 @@ async function seed() {
       // firstName: 'Jane',
       // lastName: 'Doe',
       email: 'email@email.com',
-      password: '1234'
+      password: '1234',
       // address: '123 Main Street'
     }),
     User.create({
@@ -21,25 +21,25 @@ async function seed() {
       // firstName: 'John',
       // lastName: 'Smith',
       email: 'email1@email.com',
-      password: '1234'
+      password: '1234',
       // address: '234 Main Street'
     }),
     User.create({
       email: 'email2@email.com',
-      password: '1234'
+      password: '1234',
     }),
     User.create({
       email: 'email3@email.com',
-      password: '1234'
+      password: '1234',
     }),
     User.create({
       email: 'email4@email.com',
-      password: '1234'
+      password: '1234',
     }),
     User.create({
       email: 'email5@email.com',
-      password: '1234'
-    })
+      password: '1234',
+    }),
   ])
 
   const products = await Promise.all([
@@ -51,7 +51,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg'
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1200px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg',
     }),
     Product.create({
       artist: 'Vincent van Gogh',
@@ -61,7 +61,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://www.vincentvangogh.org/images/paintings/the-night-cafe.jpg'
+        'https://www.vincentvangogh.org/images/paintings/the-night-cafe.jpg',
     }),
     Product.create({
       artist: 'Vincent van Gogh',
@@ -70,7 +70,8 @@ async function seed() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porta mi et purus aliquet molestie. Aenean sed varius orci. Donec blandit efficitur nulla varius suscipit. Aliquam non sapien eu ante iaculis maximus pharetra non nisi.',
       price: 7500,
       quantity: 50,
-      imageUrl: 'https://media.getty.edu/museum/images/web/enlarge/00094701.jpg'
+      imageUrl:
+        'https://media.getty.edu/museum/images/web/enlarge/00094701.jpg',
     }),
     Product.create({
       artist: 'Vincent van Gogh',
@@ -79,7 +80,7 @@ async function seed() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porta mi et purus aliquet molestie. Aenean sed varius orci. Donec blandit efficitur nulla varius suscipit. Aliquam non sapien eu ante iaculis maximus pharetra non nisi.',
       price: 7500,
       quantity: 50,
-      imageUrl: 'https://www.vangoghgallery.com/painting/img/bedroom_full.jpeg'
+      imageUrl: 'https://www.vangoghgallery.com/painting/img/bedroom_full.jpeg',
     }),
     Product.create({
       artist: 'Carrie Mae Weems',
@@ -89,7 +90,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://i0.wp.com/www.guggenheim.org/wp-content/uploads/2014/01/CMW_MotherDaughter_1024.jpg?w=870&zoom=2'
+        'https://i0.wp.com/www.guggenheim.org/wp-content/uploads/2014/01/CMW_MotherDaughter_1024.jpg?w=870&zoom=2',
     }),
     Product.create({
       artist: 'Helen Frankenthaler',
@@ -99,7 +100,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://uploads4.wikiart.org/images/helen-frankenthaler/interior-landscape-1964.jpg'
+        'https://uploads4.wikiart.org/images/helen-frankenthaler/interior-landscape-1964.jpg',
     }),
     Product.create({
       artist: 'Helen Frankenthaler',
@@ -109,7 +110,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://uploads2.wikiart.org/images/helen-frankenthaler/saturn-revisited-1964.jpg'
+        'https://uploads2.wikiart.org/images/helen-frankenthaler/saturn-revisited-1964.jpg',
     }),
     Product.create({
       artist: 'Helen Frankenthaler',
@@ -119,7 +120,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://uploads7.wikiart.org/images/helen-frankenthaler/what-red-lines-can-do-1970.jpg'
+        'https://uploads7.wikiart.org/images/helen-frankenthaler/what-red-lines-can-do-1970.jpg',
     }),
     Product.create({
       artist: 'Helen Frankenthaler',
@@ -129,7 +130,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://uploads5.wikiart.org/images/helen-frankenthaler/dream-walk-1977.jpg'
+        'https://uploads5.wikiart.org/images/helen-frankenthaler/dream-walk-1977.jpg',
     }),
     Product.create({
       artist: 'Mickalene Thomas',
@@ -139,7 +140,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://d1lfxha3ugu3d4.cloudfront.net/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2012_Mickalene_Thomas_Sig-Image_EL110_428W.jpg'
+        'https://d1lfxha3ugu3d4.cloudfront.net/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2012_Mickalene_Thomas_Sig-Image_EL110_428W.jpg',
     }),
     Product.create({
       artist: 'Mickalene Thomas',
@@ -149,7 +150,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://www.brooklynmuseum.org/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2012_Mickalene_Thomas_EL110.060_Interior-Two-Chairs-and-Fireplace_428H.jpg'
+        'https://www.brooklynmuseum.org/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2012_Mickalene_Thomas_EL110.060_Interior-Two-Chairs-and-Fireplace_428H.jpg',
     }),
     Product.create({
       artist: 'Mickalene Thomas',
@@ -159,7 +160,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://www.brooklynmuseum.org/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2012_Mickalene_Thomas_EL110.066_Qusuquzah-Une-Tres-Belle-Negresse-2_428H.jpg'
+        'https://www.brooklynmuseum.org/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2012_Mickalene_Thomas_EL110.066_Qusuquzah-Une-Tres-Belle-Negresse-2_428H.jpg',
     }),
     Product.create({
       artist: 'Mickalene Thomas',
@@ -169,7 +170,7 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://www.brooklynmuseum.org/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2012_Mickalene_Thomas_EL110.059_Interior.-Green-and-White-Couch_428H.jpg'
+        'https://www.brooklynmuseum.org/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2012_Mickalene_Thomas_EL110.059_Interior.-Green-and-White-Couch_428H.jpg',
     }),
     Product.create({
       artist: 'Mickalene Thomas',
@@ -179,82 +180,78 @@ async function seed() {
       price: 7500,
       quantity: 50,
       imageUrl:
-        'https://www.brooklynmuseum.org/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2012_Mickalene_Thomas_EL110.063_Landscape-With-Tree_428H.jpg'
-    })
+        'https://www.brooklynmuseum.org/assets/system-images/remote/https_d1lfxha3ugu3d4.cloudfront.net/exhibitions/images/2012_Mickalene_Thomas_EL110.063_Landscape-With-Tree_428H.jpg',
+    }),
   ])
 
   const orders = await Promise.all([
     Order.create({
-      userId: 1
+      userId: 1,
     }),
     Order.create({
-      userId: 2
+      userId: 2,
     }),
     Order.create({
-      userId: 3
+      userId: 3,
     }),
     Order.create({
-      userId: 4
-    })
+      userId: 4,
+    }),
   ])
 
   const orderProducts = await Promise.all([
     OrderProduct.create({
       orderId: 1,
       productId: 3,
-      price: 6500
+      price: 6500,
     }),
     OrderProduct.create({
       orderId: 2,
       productId: 5,
-      price: 6500
+      price: 6500,
     }),
     OrderProduct.create({
       orderId: 2,
       productId: 4,
-      price: 6500
+      price: 6500,
     }),
     OrderProduct.create({
       orderId: 3,
       productId: 5,
-      price: 6500
+      price: 6500,
     }),
     OrderProduct.create({
       orderId: 3,
       productId: 8,
-      price: 6500
+      price: 6500,
     }),
     OrderProduct.create({
       orderId: 3,
       productId: 2,
-      price: 6500
+      price: 6500,
     }),
     OrderProduct.create({
       orderId: 4,
       productId: 13,
-      price: 6500
+      price: 6500,
     }),
     OrderProduct.create({
       orderId: 4,
       productId: 3,
-      price: 6500
+      price: 6500,
     }),
     OrderProduct.create({
       orderId: 4,
       productId: 7,
-      price: 6500
+      price: 6500,
     }),
     OrderProduct.create({
       orderId: 4,
       productId: 2,
-      price: 6500
-    })
+      price: 6500,
+    }),
   ])
-
-  // console.log(`seeded ${users.length} users`)
   console.log(`seeded ${products.length} products`)
-  // console.log(`seeded ${orders.length} orders`)
-  // console.log(`seeded ${orderProducts.length} orderProducts`)
   console.log(`seeded successfully`)
 }
 

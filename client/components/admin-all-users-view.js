@@ -12,12 +12,10 @@ export class AllUsers extends React.Component {
     this.props.fetchAllUsers()
   }
   render() {
-    console.log('this.props: ', this.props)
     const users = this.props.users || []
-    console.log('this.props: ', this.props)
     return (
       <div id="allProducts">
-        {users.map(user => (
+        {users.map((user) => (
           <div key={user.id} className="allProductMapped">
             <h3>User ID: {user.id}</h3>
             <h4>Email: {user.email}</h4>
@@ -28,11 +26,11 @@ export class AllUsers extends React.Component {
   }
 }
 
-const mapState = state => {
+const mapState = (state) => {
   return {users: state.adminUser.allUsers}
 }
 
-const mapDispatch = dispatch => ({
-  fetchAllUsers: () => dispatch(fetchAllUsers())
+const mapDispatch = (dispatch) => ({
+  fetchAllUsers: () => dispatch(fetchAllUsers()),
 })
 export default connect(mapState, mapDispatch)(AllUsers)
